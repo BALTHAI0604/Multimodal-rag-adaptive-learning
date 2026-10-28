@@ -6,7 +6,10 @@ let onAuthLost = () => {}
 export const setToken = (t) => { accessToken = t }
 export const setAuthLostHandler = (fn) => { onAuthLost = fn }
 
-export const api = axios.create({ baseURL: '/api', withCredentials: true })
+export const api = axios.create({
+  baseURL: 'https://multimodal-rag-adaptive-learning.onrender.com/api',
+  withCredentials: true
+})
 api.interceptors.request.use((cfg) => {
   if (accessToken) cfg.headers.Authorization = `Bearer ${accessToken}`
   return cfg
