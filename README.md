@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Multimodal RAG-Driven Adaptive Learning with Blockchain-Secured Student Intelligence
 
 A working learning platform: a course-grounded AI companion (RAG with citations), adaptive practice, assessments with
@@ -126,3 +127,6 @@ Other students' attempts return 404; wrong-role/wrong-subject returns 403; unkno
 ## 9. Layout
 `backend/app/{api,auth,security,rag,ai,assessment,adaptive,gamification,blockchain,speech,models,schemas}`, `backend/tests`, `frontend/src/{pages,ui,lib}`, `blockchain/{contracts,abi,scripts,test}`, `firestore.rules`, `firebase.json`, `.env.example`.
 `scripts/` holds setup/start scripts, `envset.py`, `e2e_live.py`, `ui_smoke.py`; `firestore-rules-test/` the (unrun) rules tests.
+=======
+# Multimodal-rag-adaptive-learning
+>>>>>>> 4815d21c8b180cffa33a2eafa23a00ef78b57dc3
