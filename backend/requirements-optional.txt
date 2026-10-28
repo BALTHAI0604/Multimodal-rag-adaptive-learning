@@ -1,0 +1,3 @@
+# Heavy / model-downloading extras. Install what you need; the platform reports honestly when one is missing.
+sentence-transformers>=3.0        # neural multilingual embeddings (downloads a model once from Hugging Face)
+faster-whisper>=1.0               # speech-to-text (downloads a Whisper model once)

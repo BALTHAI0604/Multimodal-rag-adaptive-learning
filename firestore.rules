@@ -1,0 +1,19 @@
+rules_version = '2';
+// Deny by default. The FastAPI backend uses the Firebase Admin SDK, which BYPASSES these rules,
+// so authorisation for every API call is enforced in the backend (see README "Security model").
+// These rules only protect direct browser access to Firestore.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // users/{uid} is a read-only mirror written by the backend: { role, active }.
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;                       // roles can never be changed from a client
+    }
+
+    // Everything else: no direct client access.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

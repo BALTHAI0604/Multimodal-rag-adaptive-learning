@@ -1,0 +1,39 @@
+# Secrets & environment
+.env
+.env.*
+!.env.example
+*.pem
+serviceAccount*.json
+*-firebase-adminsdk-*.json
+firebase-service-account*.json
+
+# Runtime data
+data/*
+!data/.gitkeep
+uploads/*
+!uploads/.gitkeep
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+blockchain/cache/
+blockchain/artifacts/
+blockchain/cache/
+blockchain/deployments/
+
+# Local logs / generated
+data/logs/
+ui-shots/
+frontend/dist/
+backend/.venv/
+blockchain/artifacts/
+blockchain/cache/
